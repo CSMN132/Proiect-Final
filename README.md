@@ -23,13 +23,13 @@ Library Versions:
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/AdrianPricopie/PythonUnitTestPOMBasedProject.git
+    git clone https://github.com/CSMN132/Proiect-Final.git
     ```
 
 2. **Navigate to the project directory:**
     
     ```bash
-    cd PythonUnitTestPOMBasedProject
+    cd Proiect-Final
     ```
 
 3. **Create venv:**
@@ -45,8 +45,6 @@ Library Versions:
     ```
 
 5. **Activate the Virtual Environment:**
-
-   for windows 
     
     ```Terminal
      venv/Scripts/Activate  
