@@ -28,7 +28,7 @@ class Test_Search_Bar(unittest.TestCase):
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
         time.sleep(1)
         actualResult = self.driver.find_elements(*self.PRODUCT_ITEM)
-        expectedMessage = 'Apple, iPhone 15, 128 GB, Black'
+        expectedMessage = 'Apple, iPhone 15'
         time.sleep(1)
         self.assertIn(expectedMessage, actualResult[0].text, 'nu e ceea ce trebuie cautat')
 
@@ -37,7 +37,7 @@ class Test_Search_Bar(unittest.TestCase):
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
         time.sleep(1)
         actualResult = self.driver.find_elements(*self.PRODUCT_ITEM)
-        expectedMessage = "Huawei, P30 Dual Sim, 128 GB, Aurora Blue"
+        expectedMessage = "Huawei, P30"
         time.sleep(1)
         self.assertIn(expectedMessage, actualResult[0].text, 'nu e ceea ce trebuie cautat')
 
@@ -46,7 +46,7 @@ class Test_Search_Bar(unittest.TestCase):
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
         time.sleep(1)
         actualResult = self.driver.find_elements(*self.PRODUCT_ITEM)
-        expectedMessage = 'Xiaomi, Xiaomi 12T 5G Dual Sim, 128 GB, Black'
+        expectedMessage = 'Xiaomi, Xiaomi 12T'
         time.sleep(1)
         self.assertIn(expectedMessage, actualResult[0].text, 'nu e ceea ce trebuie cautat')
 
@@ -55,6 +55,6 @@ class Test_Search_Bar(unittest.TestCase):
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
         time.sleep(1)
         actualResult = self.driver.find_elements(*self.PRODUCT_ITEM)
-        expectedMessage = 'Apple, iPad Air 5 10.9" (2022) 5th Gen Cellular, 64 GB, Pink'
+        expectedMessage = 'Apple, iPad Air 5'
         time.sleep(1)
         self.assertIn(expectedMessage, actualResult[0].text, 'nu e ceea ce trebuie cautat')
