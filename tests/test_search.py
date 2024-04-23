@@ -32,6 +32,15 @@ class Test_Search_Bar(unittest.TestCase):
         time.sleep(1)
         self.assertIn(expectedMessage, actualResult[0].text, 'nu e ceea ce trebuie cautat')
 
+    def test_search_samsung(self):
+        self.driver.find_element(*self.SEARCH_BAR).send_keys('Samsung, Galaxy S23')
+        self.driver.find_element(*self.SEARCH_CONFIRM).click()
+        time.sleep(1)
+        actualResult = self.driver.find_elements(*self.PRODUCT_ITEM)
+        expectedMessage = 'Samsung, Galaxy S23'
+        time.sleep(1)
+        self.assertIn(expectedMessage, actualResult[0].text, 'nu e ceea ce trebuie cautat')
+
     def test_search_huawei(self):
         self.driver.find_element(*self.SEARCH_BAR).send_keys('huawei, P30')
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
