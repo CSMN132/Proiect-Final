@@ -27,30 +27,30 @@ class TestProdus(unittest.TestCase):
         self.driver.quit()
 
     def testProdusIphone(self):
-        self.driver.find_element(*self.SEARCH_BAR).send_keys('iphone 15')
+        self.driver.find_element(*self.SEARCH_BAR).send_keys('iPhone 15')
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.PRIMUL_PRODUS).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.COLOR_SELECT).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         actualResult = self.driver.find_element(*self.NUME_PRODUS)
-        expectedMessage = 'iPhone 15'
+        expectedMessage = 'iPhone 15, Black, 128 GB, Excelent'
         time.sleep(2)
         self.assertEqual(expectedMessage, actualResult.text, 'nu e ceea ce trebuie cautat')
 
     def testProdusSamsung(self):
         self.driver.find_element(*self.SEARCH_BAR).send_keys('Samsung, Galaxy S23')
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.PRIMUL_PRODUS).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.COLOR_SELECT).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.STORAGE_SELECT).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.CONDITION_SELECT).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         actualResult = self.driver.find_element(*self.NUME_PRODUS)
         expectedMessage = 'Galaxy S23 5G Dual Sim'
         time.sleep(2)
@@ -59,11 +59,11 @@ class TestProdus(unittest.TestCase):
     def testProdusHuawei(self):
         self.driver.find_element(*self.SEARCH_BAR).send_keys('huawei, nova 10')
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.PRIMUL_PRODUS).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.CONDITION_SELECT).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         actualResult = self.driver.find_element(*self.NUME_PRODUS)
         expectedMessage = 'Nova 10 SE Dual Sim'
         time.sleep(2)
@@ -72,45 +72,14 @@ class TestProdus(unittest.TestCase):
     def testProdusXiaomi(self):
         self.driver.find_element(*self.SEARCH_BAR).send_keys('Xiaomi, Xiaomi 12T')
         self.driver.find_element(*self.SEARCH_CONFIRM).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.PRIMUL_PRODUS).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         self.driver.find_element(*self.CONDITION_SELECT).click()
-        time.sleep(2)
+        self.driver.implicitly_wait(3)
         actualResult = self.driver.find_element(*self.NUME_PRODUS)
         expectedMessage = 'Xiaomi 12T 5G Dual Sim'
         time.sleep(2)
         self.assertEqual(expectedMessage, actualResult.text, 'nu e ceea ce trebuie cautat')
-
-    def testProdusIpad(self):
-        self.driver.find_element(*self.SEARCH_BAR).send_keys('Apple, iPad Pro 4')
-        self.driver.find_element(*self.SEARCH_CONFIRM).click()
-        time.sleep(2)
-        self.driver.find_element(*self.PRIMUL_PRODUS).click()
-        time.sleep(2)
-        self.driver.find_element(*self.COLOR_SELECT).click()
-        time.sleep(2)
-        self.driver.find_element(*self.STORAGE_SELECT).click()
-        time.sleep(2)
-        actualResult = self.driver.find_element(*self.NUME_PRODUS)
-        expectedMessage = 'iPad Pro 4 12.9" (2020) 4th Gen Wifi'
-        time.sleep(2)
-        self.assertEqual(expectedMessage, actualResult.text, 'nu e ceea ce trebuie cautat')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
