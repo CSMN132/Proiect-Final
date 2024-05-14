@@ -12,6 +12,7 @@ Welcome to the documentation for the automated testing project designed for the 
    This project aims to implement automated tests for the Flip.ro website using Selenium and unittest. The primary objectives include simulating user interactions and navigating through the webshop's various functionalities.
 
 Library Versions:
+
  >selenium 4.17.2
 
  >webdriver-manager 4.0.1
@@ -64,7 +65,7 @@ Execute the automated tests to verify the Flip.ro website's login and search fun
 
 The project includes HTML reports generated after each test suite run, offering detailed insights into test results. The reports provide a clear overview of the tested functionalities, making it easy to identify any issues that may arise during testing.
 
-- Below, you can see the report generated on April 24, 2024, for the sogin and search functionality
+- Below, you can see the report generated on April 24, 2024, for the sogin and search functionality:
 
 ![image](https://github.com/CSMN132/Proiect-Final/assets/139993897/2563bf50-631d-4ad7-8098-d30b9ef44c07)
 
